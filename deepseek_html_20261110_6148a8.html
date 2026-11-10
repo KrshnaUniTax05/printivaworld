@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Printiva World — Branding & Graphic Design Agency</title>
+  <meta name="description" content="Printiva World designs brand identities, social graphics, and print collateral for businesses that intend to be remembered." />
+  <meta property="og:title" content="Printiva World — Branding & Graphic Design Agency" />
+  <meta property="og:description" content="Identities, graphics, and print — crafted for brands that intend to be remembered." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://printivaworld.com/" />
+  <link rel="canonical" href="https://printivaworld.com/" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink:    '#0E0E10',
+            paper:  '#F7F7F5',
+            muted:  '#6B6B6B',
+            line:   '#E5E5E1',
+            accent: '#C4633F',
+          },
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+          letterSpacing: { widest2: '0.18em' },
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Reveal-on-scroll — respects reduced motion */
+    .reveal { opacity: 0; transform: translateY(12px); transition: opacity .5s ease-out, transform .5s ease-out; }
+    .reveal.in { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+      html { scroll-behavior: auto; }
+    }
+    ::selection { background: #C4633F; color: #fff; }
+  </style>
+</head>
+
+<body class="bg-paper text-ink font-sans antialiased">
+
+  <!-- ================= NAV ================= -->
+  <header id="nav" class="fixed top-0 inset-x-0 z-50 transition-all duration-300">
+    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="#top" class="font-semibold tracking-tight text-lg">Printiva World</a>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm text-muted">
+        <a href="#work" class="hover:text-ink transition">Work</a>
+        <a href="#services" class="hover:text-ink transition">Services</a>
+        <a href="#process" class="hover:text-ink transition">Process</a>
+        <a href="#founder" class="hover:text-ink transition">About</a>
+        <a href="#contact"
+           class="ml-4 inline-flex items-center rounded-full bg-ink text-paper px-5 py-2.5 text-sm font-medium hover:bg-accent transition">
+          Start a project
+        </a>
+      </nav>
+
+      <button id="menuBtn" aria-label="Open menu" aria-expanded="false"
+              class="md:hidden p-2 -mr-2">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div id="mobileMenu" class="md:hidden hidden bg-paper border-t border-line">
+      <nav class="px-6 py-4 flex flex-col gap-4 text-base">
+        <a href="#work" class="mobile-link">Work</a>
+        <a href="#services" class="mobile-link">Services</a>
+        <a href="#process" class="mobile-link">Process</a>
+        <a href="#founder" class="mobile-link">About</a>
+        <a href="#contact"
+           class="mobile-link mt-2 inline-flex justify-center rounded-full bg-ink text-paper px-5 py-3 font-medium">
+          Start a project
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ================= HERO ================= -->
+    <section class="pt-32 pb-20 md:pt-40 md:pb-32">
+      <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-12 gap-12 items-center">
+        <div class="md:col-span-7 reveal">
+          <p class="text-xs uppercase tracking-widest2 text-muted mb-6">Branding · Graphic · Print</p>
+          <h1 class="text-4xl md:text-6xl font-semibold tracking-tight leading-[1.05]">
+            We design identities that businesses grow into.
+          </h1>
+          <p class="mt-6 text-lg text-muted max-w-xl">
+            Branding, graphic design, and print — crafted for brands that intend to be remembered.
+          </p>
+          <div class="mt-10 flex flex-wrap items-center gap-4">
+            <a href="#contact"
+               class="inline-flex items-center rounded-full bg-ink text-paper px-7 py-3.5 text-sm font-medium hover:bg-accent transition">
+              Start a project
+            </a>
+            <a href="#work" class="text-sm text-muted hover:text-ink transition underline underline-offset-4">
+              View work
+            </a>
+          </div>
+        </div>
+
+        <!-- Portfolio mosaic — swap src for real work -->
+        <div class="md:col-span-5 grid grid-cols-2 gap-3 reveal">
+          <img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=600&q=80"
+               alt="Brand identity mockup" loading="eager"
+               class="rounded-xl aspect-[4/5] object-cover w-full" />
+          <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?w=600&q=80"
+               alt="Business card design" loading="eager"
+               class="rounded-xl aspect-[4/5] object-cover w-full mt-8" />
+          <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=600&q=80"
+               alt="Social media graphics" loading="lazy"
+               class="rounded-xl aspect-[4/5] object-cover w-full -mt-8" />
+          <img src="https://images.unsplash.com/photo-1634942537034-2531766767d1?w=600&q=80"
+               alt="Poster design" loading="lazy"
+               class="rounded-xl aspect-[4/5] object-cover w-full" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CLIENT STRIP ================= -->
+    <section class="border-y border-line">
+      <div class="max-w-6xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center gap-6 md:gap-12 reveal">
+        <p class="text-xs uppercase tracking-widest2 text-muted shrink-0">Trusted by</p>
+        <div class="flex flex-wrap items-center gap-x-10 gap-y-4 text-muted/70 font-semibold tracking-tight text-lg">
+          <span>Nimbus Co.</span>
+          <span>Vidya Academy</span>
+          <span>Rasa Foods</span>
+          <span>Orbit Studio</span>
+          <span>Kala Boutique</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= WORK ================= -->
+    <section id="work" class="py-24 md:py-32">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="flex items-end justify-between mb-12 reveal">
+          <div>
+            <p class="text-xs uppercase tracking-widest2 text-muted mb-3">Selected work</p>
+            <h2 class="text-3xl md:text-4xl font-semibold tracking-tight">Recent projects</h2>
+          </div>
+          <a href="#contact" class="hidden md:inline text-sm text-muted hover:text-ink transition underline underline-offset-4">
+            Request full portfolio
+          </a>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+          <!-- Tile 1 — replace href + img with real case study -->
+          <a href="#contact" class="group reveal block">
+            <div class="overflow-hidden rounded-xl">
+              <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80"
+                   alt="Rasa Foods brand identity" loading="lazy"
+                   class="w-full aspect-[4/5] object-cover transition duration-500 group-hover:scale-105" />
+            </div>
+            <div class="mt-4 flex items-center justify-between">
+              <div>
+                <p class="font-medium">Rasa Foods</p>
+                <p class="text-sm text-muted">Brand Identity</p>
+              </div>
+              <span class="text-muted group-hover:text-accent transition">→</span>
+            </div>
+          </a>
+
+          <a href="#contact" class="group reveal block">
+            <div class="overflow-hidden rounded-xl">
+              <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&q=80"
+                   alt="Vidya Academy print collateral" loading="lazy"
+                   class="w-full aspect-[4/5] object-cover transition duration-500 group-hover:scale-105" />
+            </div>
+            <div class="mt-4 flex items-center justify-between">
+              <div>
+                <p class="font-medium">Vidya Academy</p>
+                <p class="text-sm text-muted">Print & Collateral</p>
+              </div>
+              <span class="text-muted group-hover:text-accent transition">→</span>
+            </div>
+          </a>
+
+          <a href="#contact" class="group reveal block">
+            <div class="overflow-hidden rounded-xl">
+              <img src="https://images.unsplash.com/photo-1626785774625-0b1c2c4eab67?w=800&q=80"
+                   alt="Orbit Studio social graphics" loading="lazy"
+                   class="w-full aspect-[4/5] object-cover transition duration-500 group-hover:scale-105" />
+            </div>
+            <div class="mt-4 flex items-center justify-between">
+              <div>
+                <p class="font-medium">Orbit Studio</p>
+                <p class="text-sm text-muted">Social Media System</p>
+              </div>
+              <span class="text-muted group-hover:text-accent transition">→</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SERVICES ================= -->
+    <section id="services" class="py-24 md:py-32 border-t border-line">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="max-w-2xl mb-16 reveal">
+          <p class="text-xs uppercase tracking-widest2 text-muted mb-3">Services</p>
+          <h2 class="text-3xl md:text-4xl font-semibold tracking-tight">
+            Four disciplines. One consistent brand.
+          </h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-x-12 gap-y-10">
+          <!-- 01 -->
+          <div class="reveal border-t border-line pt-6">
+            <div class="flex items-baseline gap-4">
+              <span class="text-xs text-muted">01</span>
+              <h3 class="text-xl font-medium">Brand Identity</h3>
+            </div>
+            <p class="mt-3 text-muted pl-8">Logo design, visual systems, and brand guidelines that make your business instantly recognisable.</p>
+          </div>
+          <!-- 02 -->
+          <div class="reveal border-t border-line pt-6">
+            <div class="flex items-baseline gap-4">
+              <span class="text-xs text-muted">02</span>
+              <h3 class="text-xl font-medium">Graphic Design</h3>
+            </div>
+            <p class="mt-3 text-muted pl-8">Social media creatives, website banners, YouTube thumbnails — designed to stop the scroll.</p>
+          </div>
+          <!-- 03 -->
+          <div class="reveal border-t border-line pt-6">
+            <div class="flex items-baseline gap-4">
+              <span class="text-xs text-muted">03</span>
+              <h3 class="text-xl font-medium">Print & Collateral</h3>
+            </div>
+            <p class="mt-3 text-muted pl-8">Business cards, flyers, brochures, posters, and certificates — printed to feel premium in hand.</p>
+          </div>
+          <!-- 04 -->
+          <div class="reveal border-t border-line pt-6">
+            <div class="flex items-baseline gap-4">
+              <span class="text-xs text-muted">04</span>
+              <h3 class="text-xl font-medium">Digital Presence</h3>
+            </div>
+            <p class="mt-3 text-muted pl-8">Social media systems and web banners that keep your brand consistent across every touchpoint.</p>
+          </div>
+        </div>
+
+        <div class="mt-14 reveal">
+          <a href="#contact"
+             class="inline-flex items-center rounded-full border border-ink px-6 py-3 text-sm font-medium hover:bg-ink hover:text-paper transition">
+            Discuss your project
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROCESS ================= -->
+    <section id="process" class="py-24 md:py-32 border-t border-line">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="max-w-2xl mb-16 reveal">
+          <p class="text-xs uppercase tracking-widest2 text-muted mb-3">Process</p>
+          <h2 class="text-3xl md:text-4xl font-semibold tracking-tight">
+            From brief to delivery, without surprises.
+          </h2>
+        </div>
+
+        <div class="grid md:grid-cols-4 gap-8">
+          <div class="reveal">
+            <p class="text-4xl font-semibold text-line">01</p>
+            <h3 class="mt-4 font-medium">Brief</h3>
+            <p class="mt-2 text-sm text-muted">We understand your business, audience, and goals.</p>
+          </div>
+          <div class="reveal">
+            <p class="text-4xl font-semibold text-line">02</p>
+            <h3 class="mt-4 font-medium">Design</h3>
+            <p class="mt-2 text-sm text-muted">Concepts crafted around your brand's positioning.</p>
+          </div>
+          <div class="reveal">
+            <p class="text-4xl font-semibold text-line">03</p>
+            <h3 class="mt-4 font-medium">Refine</h3>
+            <p class="mt-2 text-sm text-muted">Two rounds of revision until it feels exactly right.</p>
+          </div>
+          <div class="reveal">
+            <p class="text-4xl font-semibold text-line">04</p>
+            <h3 class="mt-4 font-medium">Deliver</h3>
+            <p class="mt-2 text-sm text-muted">Final files in every format you need — on schedule.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FOUNDER ================= -->
+    <section id="founder" class="py-24 md:py-32 border-t border-line">
+      <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+        <div class="reveal">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80"
+               alt="Pragati Sharma, Founder of Printiva World" loading="lazy"
+               class="w-full rounded-xl aspect-[4/5] object-cover" />
+        </div>
+        <div class="reveal">
+          <p class="text-xs uppercase tracking-widest2 text-muted mb-6">Founder</p>
+          <blockquote class="text-2xl md:text-3xl font-medium tracking-tight leading-snug">
+            "Great design creates a lasting impression. Our goal is to help businesses build a professional identity that inspires trust and supports growth."
+          </blockquote>
+          <div class="mt-8 pt-6 border-t border-line">
+            <p class="font-medium">Pragati Sharma</p>
+            <p class="text-sm text-muted">Founder &amp; Owner, Printiva World</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= METRICS ================= -->
+    <section class="py-16 border-t border-line">
+      <div class="max-w-6xl mx-auto px-6 grid grid-cols-3 gap-6 text-center reveal">
+        <div>
+          <p class="text-3xl md:text-4xl font-semibold tracking-tight">150+</p>
+          <p class="mt-1 text-xs uppercase tracking-widest2 text-muted">Projects</p>
+        </div>
+        <div>
+          <p class="text-3xl md:text-4xl font-semibold tracking-tight">100+</p>
+          <p class="mt-1 text-xs uppercase tracking-widest2 text-muted">Clients</p>
+        </div>
+        <div>
+          <p class="text-3xl md:text-4xl font-semibold tracking-tight">98%</p>
+          <p class="mt-1 text-xs uppercase tracking-widest2 text-muted">Satisfaction</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CTA ================= -->
+    <section id="contact" class="py-24 md:py-32 bg-ink text-paper">
+      <div class="max-w-4xl mx-auto px-6 text-center reveal">
+        <h2 class="text-3xl md:text-5xl font-semibold tracking-tight leading-tight">
+          Have a project in mind?
+        </h2>
+        <p class="mt-6 text-lg text-paper/70 max-w-xl mx-auto">
+          Tell us what your brand could become. We'll reply within one working day.
+        </p>
+        <div class="mt-10 flex flex-wrap justify-center gap-4">
+          <a href="https://wa.me/918510837687?text=Hi%20Printiva%20World%2C%20I%27d%20like%20to%20discuss%20a%20project."
+             target="_blank" rel="noopener"
+             class="inline-flex items-center gap-2 rounded-full bg-paper text-ink px-7 py-3.5 text-sm font-medium hover:bg-accent hover:text-paper transition">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            Chat on WhatsApp
+          </a>
+          <a href="mailto:hello@printivaworld.com?subject=Project%20enquiry"
+             class="inline-flex items-center rounded-full border border-paper/30 px-7 py-3.5 text-sm font-medium hover:bg-paper/10 transition">
+            hello@printivaworld.com
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-ink text-paper/60 border-t border-paper/10">
+      <div class="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-4 gap-10 text-sm">
+        <div class="md:col-span-2">
+          <p class="text-paper font-semibold tracking-tight text-base">Printiva World</p>
+          <p class="mt-3 max-w-xs">
+            Creative graphic design &amp; branding agency helping businesses build a strong visual identity.
+          </p>
+        </div>
+        <div>
+          <p class="text-paper font-medium mb-3">Services</p>
+          <ul class="space-y-2">
+            <li><a href="#services" class="hover:text-paper transition">Brand Identity</a></li>
+            <li><a href="#services" class="hover:text-paper transition">Graphic Design</a></li>
+            <li><a href="#services" class="hover:text-paper transition">Print &amp; Collateral</a></li>
+            <li><a href="#services" class="hover:text-paper transition">Digital Presence</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="text-paper font-medium mb-3">Contact</p>
+          <ul class="space-y-2">
+            <li><a href="mailto:hello@printivaworld.com" class="hover:text-paper transition">hello@printivaworld.com</a></li>
+            <li><a href="tel:+918510837687" class="hover:text-paper transition">+91 85108 37687</a></li>
+            <li><a href="https://wa.me/918510837687" target="_blank" rel="noopener" class="hover:text-paper transition">WhatsApp</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-paper/10">
+        <div class="max-w-6xl mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-3 text-xs">
+          <p>© <span id="year"></span> Printiva World. All rights reserved.</p>
+          <a href="#top" class="hover:text-paper transition">Back to top ↑</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Sticky nav solidifies on scroll
+    const nav = document.getElementById('nav');
+    const onScroll = () => {
+      if (window.scrollY > 24) {
+        nav.classList.add('bg-paper/90', 'backdrop-blur', 'border-b', 'border-line');
+      } else {
+        nav.classList.remove('bg-paper/90', 'backdrop-blur', 'border-b', 'border-line');
+      }
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    // Mobile menu
+    const btn = document.getElementById('menuBtn');
+    const menu = document.getElementById('mobileMenu');
+    btn.addEventListener('click', () => {
+      const open = menu.classList.toggle('hidden') === false;
+      btn.setAttribute('aria-expanded', open);
+    });
+    document.querySelectorAll('.mobile-link').forEach(a =>
+      a.addEventListener('click', () => menu.classList.add('hidden'))
+    );
+
+    // Reveal on scroll
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  </script>
+</body>
+</html>
